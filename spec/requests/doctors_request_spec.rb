@@ -1,18 +1,19 @@
 require 'rails_helper'
 
-RSpec.describe "Hospitals", type: :request do
+RSpec.describe "Doctors", type: :request do
 
-  describe "GET /hospitals" do
+  describe "GET /doctors" do
     it "returns http success" do
-      get "/hospitals"
+      get "/doctors"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /new" do
     it "returns http success" do
-      get "/hospitals/new"
+      get "/doctors/new"
       expect(response).to have_http_status(:success)
     end
   end
+
 end

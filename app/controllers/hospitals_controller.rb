@@ -12,10 +12,8 @@ class HospitalsController < ApplicationController
     respond_to do |format|
       if @hospital.save
         format.html { redirect_to hospitals_path, notice: 'Hospital was successfully created.' }
-        format.json { render :show, status: :created, location: @hospital }
       else
         format.html { render :new }
-        format.json { render json: @hospital.errors, status: :unprocessable_entity }
       end
     end
   end
