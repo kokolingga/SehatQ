@@ -1,0 +1,19 @@
+<h1>Hospital</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hospitals.each do |hospital| %>
+      <tr>
+        <td><%= hospital.name %></td>
+        <td><%= hospital.address %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
