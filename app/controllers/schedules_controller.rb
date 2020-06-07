@@ -8,7 +8,8 @@ class SchedulesController < ApplicationController
     @schedule = Schedule.new(schedule_params)
     respond_to do |format|
       if @schedule.save
-        format.html { redirect_to doctors_path, notice: 'Schedule was successfully created.' }
+        doctor = Doctor.find(@schedule.doctor_id)
+        format.html { redirect_to doctor, notice: 'Schedule was successfully created.' }
       else
         format.html { render :new }
       end
