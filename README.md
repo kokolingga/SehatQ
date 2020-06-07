@@ -1,24 +1,25 @@
-# README
+# SehatQ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Prerequisites
+* Ruby
+* Rails
+* PostgreSQL
 
-Things you may want to cover:
+## Setup Repo
+* clone into your chosen folder (eq : `~/works/`)
+* `$ cd ~/works/sehatQ`
+* `$ cd bundle install`
+* `$ rake db:create`
+* `$ rake db:migrate`
 
-* Ruby version
+## Setup for Facebook Login
+* register to https://developers.facebook.com/ , create an App called 'sehatQ'.
+* on https://developers.facebook.com/apps/YOUR_APP_ID/settings/basic/, set the Site URL to `http://localhost:3000/`
+* copy the `App ID` and `App Secret`
+* rename file `~/sehatQ/config/application.yml.tmp` into `~/sehatQ/config/application.yml`
+* open the `~/sehatQ/config/application.yml`, replace the `facebook_app_id` and `facebook_secret` values with your `App ID` and `App Secret` from the previous step.
 
-* System dependencies
+## Run the Apps :
+* `$ rails s`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### - Thank You -
