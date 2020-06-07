@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  
   # devise_scope :user do
   #   root to: "devise/sessions#new"
   # end
@@ -8,7 +7,12 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
   get '/pages/home'
+
   resources :hospitals
-  resources :doctors
-  resources :schedules
+
+  resources :doctors do
+    resources :schedules
+  end
+
+  resources :bookings
 end

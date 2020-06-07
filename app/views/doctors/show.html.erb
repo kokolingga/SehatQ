@@ -1,4 +1,4 @@
-<h1>Doctor's Schedule</h1>
+<h1>Doctor's Schedules</h1>
 
 <p>
   <strong>Name:</strong>
@@ -24,10 +24,16 @@
         <td><%= schedule.id %></td>
         <td><%= schedule.date_start %></td>
         <td><%= schedule.date_end %></td>
+        <td><%= link_to "Booking", doctor_schedule_path(@doctor, schedule.id) %></td>
       </tr>
     <% end %>
   </tbody>
-
 </table>
 
-<%= link_to 'Back', doctors_path %>
+<p>
+  <%= link_to 'New Schedule', new_doctor_schedule_path(@doctor) %>
+</p>
+
+<p>
+  <%= link_to 'Back', doctors_path %>
+</p>

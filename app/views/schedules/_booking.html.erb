@@ -1,0 +1,49 @@
+<%= form_with(model: booking, local: true) do |form| %>
+    <% if booking.errors.any? %>
+     <div id="error_explanation">
+      <h2><%= pluralize(booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+ 
+       <ul>
+      <% booking.errors.full_messages.each do |message| %>
+         <li><%= message %></li>
+       <% end %>
+       </ul>
+     </div>
+    <% end %>
+
+  <%= form.hidden_field :schedule_id, :value => booking.schedule.id %>
+
+   <div class="field">
+    <%= form.label :patient_name %>
+    <%= form.text_field :patient_name %>
+   </div>
+
+   <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+   </div>
+
+   <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+   </div>
+
+   <div class="field">
+    <%= form.label :birthdate %>
+    <%= form.text_field :birthdate %>
+   </div>
+   
+   <div class="field">
+    <%= form.label :payment_method %>
+    <%= form.text_field :payment_method %>
+   </div>
+
+   <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_field :notes %>
+   </div>
+
+   <div class="actions">
+     <%= form.submit %>
+   </div>
+<% end %>

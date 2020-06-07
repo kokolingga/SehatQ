@@ -1,5 +1,6 @@
 class Schedule < ApplicationRecord
     belongs_to :doctor
+    has_many :bookings
 
     validates :date_start, presence: true
     validates :date_end, presence: true
