@@ -8,7 +8,7 @@
 ## Setup Repo
 * clone into your chosen folder (eq : `~/works/`)
 * `$ cd ~/works/sehatQ`
-* `$ cd bundle install`
+* `$ bundle install`
 * `$ rake db:create`
 * `$ rake db:migrate`
 
