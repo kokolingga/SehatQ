@@ -8,6 +8,7 @@ class SchedulesController < ApplicationController
 
   def show
     @booking = @schedule.bookings.build
+    @bookings = Booking.where(schedule_id: @schedule.id)
   end
 
   def new
